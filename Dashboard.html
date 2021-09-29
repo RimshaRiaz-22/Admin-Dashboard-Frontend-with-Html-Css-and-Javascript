@@ -1,0 +1,594 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Admin LTE</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+	<div class="container" style="padding-left: 0px;">
+		<!-- Side Menu -->
+		<div class="navigation ">
+			<ul>
+				<li>
+					<a href="#" class="sticky-top" style="border-bottom:1px solid;">
+						<span class="icon"><img src="images/AdminLTELogo.png" class="logo"></span>
+						<span class="title">
+							<h5 class="headding" style=" padding: 16px; font-size:18px; margin-top: 8px;">AdminLTE3</h5>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="border-bottom" style="margin: 6px 0 8px 0;">
+						<span class="icon">
+							<div class="profile" onclick=" menuToggle();"><img src="images/avatar.jpg" class="sideimg">
+							</div>
+						</span>
+						<span class="title">
+							<h2 class="headding" style="margin-top: 5px; margin-left: 5px;">Alexander Pierce</h2>
+						</span>
+					</a>
+				</li>
+				<li>
+
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon"><i class="fa fa-tachometer" aria-hidden="true"></i></span>
+						<span class="title">
+							<h2 class="headding" style="margin-top: 5px;">Dashboard</h2>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon"><i class="fa fa-th" aria-hidden="true"></i></span>
+						<span class="title">
+							<h2 class="headding" style="margin-top: 5px;">Widgets</h2>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon"><i class="fa fa-pie-chart" aria-hidden="true"></i></span>
+						<span class="title">
+							<h2 class="headding" style="margin-top: 6px;">Charts</h2>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+						<span class="title">
+							<h2 class="headding" style="margin-top: 2px;">Forms</h2>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon"><i class="fa fa-table" aria-hidden="true"></i></span>
+						<span class="title">
+							<h2 class="headding" style="margin-top: 2px;">Tables</h2>
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--end side nav-->
+		<!--main menu-->
+		<div class="main " style="z-index: 1;">
+			<div class="topbar sticky-top" style="z-index: 2; ">
+				<div class="left" style="display: flex; flex-direction: row; margin: 0 0 0 0;">
+					<div class="toggle " onClick="toggleMenu();"></div>
+					<div class="home " style="padding-right: 0px; color: black;">Home </div>
+					<div class="home" style="padding-right: 0px;">Contact</div>
+					<div class="right1 navbar-right " style="display: flex; flex-direction: row; float: right;">
+						<ul class="nav navbar-nav ml-auto" style="display: flex;flex-direction: row;">
+							<li class="nav-item">
+								<a class="nav-link">
+									<i id="hovnav3" class="fa fa-search" aria-hidden="true" style="color: grey;"></i>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link">
+									<div class="dropdown" id="dropdown">
+										<button type="button" class="btn" data-toggle="dropdown"
+											style="margin: -35px 0 0 0; padding: 0 0 0 0; color: grey;">
+											<i class="fa fa-comments" aria-hidden="true"></i>
+											<span class="badge"
+												style="position: absolute;top: -10px;right: -3px;padding: 1px 4px; border-radius: 50%; background-color: red;color: white;">3</span>
+										</button>
+										<div class="dropdown-menu" id="dropdown-menu"
+											style="    margin: -22px 0 0 -196px;">
+											<a class="dropdown-item" href="#">
+												<div class="flex-container border-bottom"
+													style="display: flex; flex-direction: row;">
+													<div class="chat" style="flex-grow: 1;"><img
+															src="images/avatar.jpg"></div>
+													<div class="flex-container"
+														style="display: flex; flex-direction: column; flex-grow: 2">
+														<div style="margin-left: 40px; font-size: 18px;">Brad Diesal
+														</div>
+														<div style="margin-left: 40px; font-size: 12px;">Call me
+															whenever you can ...</div>
+														<div class="time"><i class="fa fa-clock-o"
+																aria-hidden="true"></i> 4 Hours Ago</div>
+													</div>
+												</div>
+											</a>
+											<a class="dropdown-item" href="#">
+												<div class="flex-container border-bottom"
+													style="display: flex; flex-direction: row;">
+													<div class="chat" style="flex-grow: 1;"><img
+															src="images/user2-160x160.jpg"></div>
+													<div class="flex-container"
+														style="display: flex; flex-direction: column; flex-grow: 2">
+														<div style="margin-left: 40px; font-size: 18px;">Brad Diesal
+														</div>
+														<div style="margin-left: 40px; font-size: 12px;">Call me
+															whenever you can ...</div>
+														<div class="time"><i class="fa fa-clock-o"
+																aria-hidden="true"></i> 4 Hours Ago</div>
+													</div>
+												</div>
+											</a>
+											<a class="dropdown-item" href="#">
+												<div class="flex-container border-bottom"
+													style="display: flex; flex-direction: row;">
+													<div class="chat" style="flex-grow: 1;"><img
+															src="images/avatar.jpg"></div>
+													<div class="flex-container"
+														style="display: flex; flex-direction: column; flex-grow: 2">
+														<div style="margin-left: 40px; font-size: 18px;">Brad Diesal
+														</div>
+														<div style="margin-left: 40px; font-size: 12px;">Call me
+															whenever you can ...</div>
+														<div class="time"><i class="fa fa-clock-o"
+																aria-hidden="true"></i> 4 Hours Ago</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link">
+									<div class="dropdown border-bottom" id="dropdown1">
+										<button type="button" class="btn" data-toggle="dropdown"
+											style="margin: -35px 0 0 0; padding: 0 0 0 0; color: grey;">
+											<i id="hovnav" class="fa fa-bell" aria-hidden="true"
+												style="color: grey;"></i>
+											<span class="badge"
+												style="position: absolute;top: -10px;right: -3px;padding: 1px 4px; border-radius: 50%; background-color: yellow;color: black;">3</span>
+										</button>
+										<div class="dropdown-menu" id="dropdown-menu1"
+											style="   margin: -22px 0 0 -196px;">
+											<a class="dropdown-item" href="#">
+												<div class="flex-container"
+													style="color: grey; font-size: 14px; align-items: center; margin-left: 40px; padding: 10px;">
+													15 Notifications
+												</div>
+											</a>
+											<a class="dropdown-item" href="#">
+												<div class="flex-container border-top"
+													style="display: flex; flex-direction: row; ">
+													<div><i class="fa fa-envelope" aria-hidden="true"
+															style="font-size: 12px;padding: 10px;"></i> 4 New Messages
+													</div>
+													<div
+														style="float: right; margin-left: 40px; color: gray; font-size: 12px; margin-top: 10px;">
+														3 min</div>
+												</div>
+											</a>
+											<a class="dropdown-item" href="#">
+												<div class="flex-container border-top"
+													style="display: flex; flex-direction: row; ">
+													<div><i class="fa fa-users" aria-hidden="true"
+															style="font-size: 12px;padding: 10px; "></i> 8 Friend
+														Requests</div>
+													<div
+														style="float: right; margin-left: 40px; color: gray; font-size: 12px; margin-top: 10px;">
+														2 min</div>
+												</div>
+											</a>
+											<a class="dropdown-item" href="#">
+												<div class="flex-container"
+													style="color: grey; font-size: 12px; align-items: center; margin-left: 40px; padding: 10px;">
+													See All
+
+												</div>
+											</a>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link"><i id="hovnav1" class="fa fa-arrows-alt" aria-hidden="true"
+										style="color: grey;"></i></a>
+
+							</li>
+							<li class="nav-item">
+								<a class="nav-link"><i id="hovnav2" class="fa fa-th-large" aria-hidden="true"
+										style="color: grey;"></i></a>
+
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- sales -->
+			<div class="head">Dashboard</div>
+			<div class="flex-container" style="display: flex; flex-direction: row; flex-wrap: wrap; margin-left: 10px;">
+				<div class="box bg-info" style=" border-radius: 5px; margin-right: 10px;">
+					<div class="" style="display: flex; flex-direction: row;">
+						<div class="percent">150</div>
+						<div class="iconhov"><i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
+					</div>
+					<div class="shorttxt">New Orders</div>
+					<div class="content" style="text-align: center;">More Info <i class="fa fa-arrow-circle-o-right"
+							aria-hidden="true"></i></div>
+				</div>
+				<div class="box bg-success" style=" border-radius: 5px; margin-right: 10px;">
+					<div class="" style="display: flex; flex-direction: row;">
+						<div class="percent">53%</div>
+						<div class="iconhov"><i class="fa fa-bar-chart" aria-hidden="true"></i></div>
+					</div>
+					<div class="shorttxt">Bounce Rate</div>
+					<div class="content" style="text-align: center;">More Info <i class="fa fa-arrow-circle-o-right"
+							aria-hidden="true"></i></div>
+				</div>
+				<div class="box bg-warning" style=" border-radius: 5px; margin-right: 10px;">
+					<div class="" style="display: flex; flex-direction: row;">
+						<div class="percent">44</div>
+						<div class="iconhov"><i class="fa fa-user" aria-hidden="true"></i></div>
+					</div>
+					<div class="shorttxt">User Registrations</div>
+					<div class="content" style="text-align: center;">More Info <i class="fa fa-arrow-circle-o-right"
+							aria-hidden="true"></i></div>
+				</div>
+				<div class="box bg-danger" style=" border-radius: 5px;">
+					<div class="" style="display: flex; flex-direction: row;">
+						<div class="percent">65</div>
+						<div class="iconhov"><i class="fa fa-pie-chart" aria-hidden="true"></i></div>
+					</div>
+					<div class="shorttxt">Unique Visitors</div>
+					<div class="content" style="text-align: center;">More Info <i class="fa fa-arrow-circle-o-right"
+							aria-hidden="true"></i></div>
+				</div>
+			</div>
+			<!-- end  -->
+			<!-- sales graph and visitors graph -->
+			<div class="flex-row">
+				<div class="border" id="sales">
+					<div class="row1">
+						<div class="sales1"> <i class="fa fa-pie-chart" aria-hidden="true"></i>
+							<div class="sd"> Sales</div>
+						</div>
+						<div> <button class="btn btn-info" style="margin-left: 10px;">Area</button> </div>
+						<div id="donut" style="padding: 10px;">Donut</div>
+
+					</div>
+					<div class="" style="  margin: 0px 12px 0 32px;"> <img src="images/graphs.png" id="imgsales"></div>
+				</div>
+				<div class="border" id="visitors"
+					style="background: #007bff linear-gradient(180deg,#268fff,#007bff) repeat-x!important; border-radius:16px;">
+					<div style="display: flex; flex-direction: row; padding: 14px; ">
+						<div class="card-title"><i class="fa fa-map-marker" aria-hidden="true"></i> Visitors</div>
+						<div class="visiticon"> <button type="button" class="btn bg-info btn-sm"
+								style=" padding: 5px; font-size: 20px; color: white;"><i class="fa fa-calendar"
+									aria-hidden="true"></i></button></div>
+						<div style="margin-left: 10px;"> <button type="button" class="btn bg-info btn-sm"
+								style=" padding: 5px; font-size: 20px; color: white;"><i class="fa fa-minus"
+									aria-hidden="true"></i></button></div>
+					</div>
+					<div><img src="images/gg.PNG" id="visit"> </div>
+				</div>
+			</div>
+			<!-- end row  -->
+			<!-- direct chat and sales row -->
+			<div class="row2">
+				<div class="border" id="chatt">
+					<div class="flex-container" style="display: flex; flex-direction: row">
+						<div> <i class="fa fa-comments" aria-hidden="true"></i> Direct Chat</div>
+						<div class="flex-container" style="display: flex; flex-direction: row; margin-left: 405px;">
+							<div> <span class="badge"
+									style="position: absolute;padding: 1px 4px;border-radius: 16%; margin: 7px 7px 0 -6px; background-color: #007bff;color: #fff;">3</span>
+							</div>
+							<div style="margin:-2px 0 0 26px;"><i class="fa fa-minus" id="faa" aria-hidden="true"></i>
+							</div>
+							<div style="margin:-2px 0 0 26px;"><i class="fa fa-comment" id="faa1"
+									aria-hidden="true"></i></div>
+							<div style="margin:-2px 0 0 26px;"><i class="fa fa-times" id="faa2" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+					<div class="ex1" style="background-color: white; display: flex;flex-direction: column;">
+						<div class="timetxt" style="display: flex; flex-direction: row;">
+							<div class="name">Alexendra Pierce</div>
+							<div class="time1"><span class="time-right">23 Jan 2:00pm</span></div>
+						</div>
+						<div class="accord" style="display: flex; flex-direction: row">
+							<div class="imgcon"><img src="images/user1-128x128.jpg" alt="Avatar"
+									style="margin: 17px 4px 2px 0; opacity: .6; border-radius: 50%; width: 40px; height: 40px;">
+							</div>
+							<div class="container1">							
+								<p>Hello. How are you today?</p>
+							</div>
+						</div>
+						<div class="timetxt" style="display: flex; flex-direction: row;">
+							<div class="time1"><span class="time-left">23 Jan 2:05pm</span></div>
+							<div class="name" style="float: right;">Sarah Bullock</div>
+
+						</div>
+						<div class="accord" style="display: flex; flex-direction: row">
+							<div class="container2 darker">
+								<p>Hey! I'm fine. Thanks for asking!</p>
+							</div>
+							<div class="imgcon"><img src="images/3.jpg" alt="Avatar"
+									style="margin: 17px 4px 2px 0; opacity: .6; border-radius: 50%; width: 40px; height: 40px;">
+							</div>
+						</div>
+						<div class="timetxt" style="display: flex; flex-direction: row;">
+							<div class="name">Alexendra Pierce</div>
+							<div class="time1"><span class="time-right">23 Jan 2:00pm</span></div>
+						</div>
+						<div class="accord" style="display: flex; flex-direction: row">
+							<div class="imgcon"><img src="images/user1-128x128.jpg" alt="Avatar"
+									style="margin: 17px 4px 2px 0; opacity: .6; border-radius: 50%; width: 40px; height: 40px;">
+							</div>
+							<div class="container1">
+								<p>Sweet! So, what do you wanna do today?</p>
+							</div>
+						</div>
+						<div class="timetxt" style="display: flex; flex-direction: row;">
+							<div class="time1"><span class="time-left">23 Jan 2:05pm</span></div>
+							<div class="name" style="float: right;">Sarah Bullock</div>
+						</div>						
+						<div class="accord" style="display: flex; flex-direction: row">
+
+							<div class="container2 darker">
+
+								<p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+
+							</div>
+							<div class="imgcon"><img src="images/3.jpg" alt="Avatar"
+									style="margin: 17px 4px 2px 0; opacity: .6; border-radius: 50%; width: 40px; height: 40px;">
+							</div>
+						</div>
+						<div class="timetxt" style="display: flex; flex-direction: row;">
+							<div class="name">Alexendra Pierce</div>
+							<div class="time1"><span class="time-right">23 Jan 2:00pm</span></div>
+						</div>
+						<div class="accord" style="display: flex; flex-direction: row">
+							<div class="imgcon"><img src="images/user1-128x128.jpg" alt="Avatar"
+									style="margin: 17px 4px 2px 0; opacity: .6; border-radius: 50%; width: 40px; height: 40px;">
+							</div>
+							<div class="container1">
+
+								<p>Sweet! So, what do you wanna do today?</p>
+
+							</div>
+						</div>
+						<div class="timetxt" style="display: flex; flex-direction: row;">
+							<div class="time1"><span class="time-left">23 Jan 2:05pm</span></div>
+							<div class="name" style="float: right;">Sarah Bullock</div>
+
+						</div>
+						<div class="accord" style="display: flex; flex-direction: row">
+
+							<div class="container2 darker">
+
+								<p>Hey! I'm fine. Thanks for asking!</p>
+
+							</div>
+							<div class="imgcon"><img src="images/3.jpg" alt="Avatar"
+									style="margin: 17px 4px 2px 0; opacity: .6; border-radius: 50%; width: 40px; height: 40px;">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="graph">
+					<div style="display: flex; flex-direction: row; padding: 14px;">
+						<div class="card-title"><i class="fa fa-th" aria-hidden="true"></i> Sales Graph</div>
+						<div class="graph1"> <button type="button" class="btn bg-info btn-sm"
+								style=" padding: 5px; font-size: 20px; color: white;"><i class="fa fa-plus"
+									aria-hidden="true"></i></button></div>
+						<div style="margin-left: 10px;"> <button type="button" class="btn bg-info btn-sm"
+								style=" padding: 5px; font-size: 20px; color: white;"> <i class="fa fa-minus"
+									aria-hidden="true"></i> </button></div>
+					</div>
+					<div><img src="images/Capture.PNG" id="graphimg"> </div>
+
+
+				</div>
+			</div>
+			<!-- end row  -->
+			<!-- calender row  -->
+			<div class="calender">
+				<div id="row3list" class="">
+					<div class="flex-container" style="display: flex; flex-direction: row; margin: 0 0 -32px 0;">
+						<div style="width: 104%; padding: 16px;"><i class="fa fa-clipboard" aria-hidden="true"></i>
+							<div class="todolist">To Do List</div>
+						</div>
+						<div class="tools" style="width: 25%; margin-right: 23px;">
+							<ul style="display: flex; cursor: move; padding: 10px;">
+								<li class="list"><a href="#"><i class="fa fa-angle-double-left"
+											aria-hidden="true"></i></a></li>
+								<li class="list"><a href="#">1</a></li>
+								<li class="list"><a href="#">2</a></li>
+								<li class="list"><a href="#">3</a></li>
+								<li class="list"><a href="#"><i class="fa fa-angle-double-right"
+											aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div style="padding: 20px;">
+						<div class="design">
+							<div><i class="fa fa-ellipsis-v" aria-hidden="true"></i> <i class="fa fa-ellipsis-v"
+									aria-hidden="true"></i></div>
+							<div class="form-check" style="margin-left: 20px;">
+								<label class="form-check-label">
+									<input type="checkbox" class="form-check-input" disabled>Design a Nice Theme
+								</label>
+							</div>
+							<div style="margin-left: 10px;"> <button type="button" class="btn btn-danger"
+									style="font-size: 9px;"><i class="fa fa-clock-o" aria-hidden="true"></i>
+									<div class="ttime"> 2 min</div>
+								</button></div>
+						</div>
+						<div class="design">
+							<div><i class="fa fa-ellipsis-v" aria-hidden="true"></i> <i class="fa fa-ellipsis-v"
+									aria-hidden="true"></i></div>
+							<div class="form-check" style="margin-left: 20px;">
+								<label class="form-check-label">
+									<input type="checkbox" class="form-check-input" disabled>Design a Nice Theme
+								</label>
+							</div>
+							<div style="margin-left: 10px;"> <button type="button" class="btn btn-danger"
+									style="font-size: 9px;"><i class="fa fa-clock-o" aria-hidden="true"></i>
+									<div class="ttime"> 2 min</div>
+								</button></div>
+						</div>
+						<div class="design">
+							<div><i class="fa fa-ellipsis-v" aria-hidden="true"></i> <i class="fa fa-ellipsis-v"
+									aria-hidden="true"></i></div>
+							<div class="form-check" style="margin-left: 20px;">
+								<label class="form-check-label">
+									<input type="checkbox" class="form-check-input" disabled>Design a Nice Theme
+								</label>
+							</div>
+							<div style="margin-left: 10px;"> <button type="button" class="btn btn-danger"
+									style="font-size: 9px;"><i class="fa fa-clock-o" aria-hidden="true"></i>
+									<div class="ttime"> 2 min</div>
+								</button></div>
+						</div>
+						<div class="design">
+							<div><i class="fa fa-ellipsis-v" aria-hidden="true"></i> <i class="fa fa-ellipsis-v"
+									aria-hidden="true"></i></div>
+							<div class="form-check" style="margin-left: 20px;">
+								<label class="form-check-label">
+									<input type="checkbox" class="form-check-input" checked>Design a Nice Theme
+								</label>
+							</div>
+							<div style="margin-left: 10px;"> <button type="button" class="btn bg-success"
+									style="font-size: 9px;"><i class="fa fa-clock-o" aria-hidden="true"></i>
+									<div class="ttime"> 5 min</div>
+								</button></div>
+						</div>
+						<div class="design">
+							<div><i class="fa fa-ellipsis-v" aria-hidden="true"></i> <i class="fa fa-ellipsis-v"
+									aria-hidden="true"></i></div>
+							<div class="form-check" style="margin-left: 20px;">
+								<label class="form-check-label">
+									<input type="checkbox" class="form-check-input" disabled>Let Them Shine Like a Star
+								</label>
+							</div>
+							<div style="margin-left: 10px;"> <button type="button" class="btn btn-dark"
+									style="font-size: 9px;"><i class="fa fa-clock-o" aria-hidden="true"></i>
+									<div class="ttime"> 2 min</div>
+								</button></div>
+						</div>
+						<div class="design">
+							<div><i class="fa fa-ellipsis-v" aria-hidden="true"></i> <i class="fa fa-ellipsis-v"
+									aria-hidden="true"></i></div>
+							<div class="form-check" style="margin-left: 20px;">
+								<label class="form-check-label">
+									<input type="checkbox" class="form-check-input" disabled>Design a Nice Theme
+								</label>
+							</div>
+							<div style="margin-left: 10px;"> <button type="button" class="btn btn-danger"
+									style="font-size: 9px;"><i class="fa fa-clock-o" aria-hidden="true"></i>
+									<div class="ttime"> 2 min</div>
+								</button></div>
+						</div>
+						<div class="float-right" style="margin-right: 20px;"><button class="btn btn-info"
+								type="button"><i class="fa fa-plus" aria-hidden="true"></i> Add Item</button></div>
+					</div>
+				</div>
+				<div id="calenderrow" class="bg-success">
+					<h6 style=" margin: 15px 0 0 17px;"><i class="fa fa-calendar" aria-hidden="true"></i> Calender</h6>
+					<div class="month">
+						<ul>
+							<li class="prev">&#10094;</li>
+							<li class="next">&#10095;</li>
+							<li class="month">
+								August<br>
+								<span class="year">2021</span>
+							</li>
+						</ul>
+					</div>
+
+					<ul class="weekdays">
+						<li>Mo</li>
+						<li>Tu</li>
+						<li>We</li>
+						<li>Th</li>
+						<li>Fr</li>
+						<li>Sa</li>
+
+					</ul>
+
+					<ul class="days">
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+						<li>8</li>
+						<li>9</li>
+						<li>10</li>
+						<li>11</li>
+						<li>12</li>
+						<li>13</li>
+						<li>14</li>
+						<li>15</li>
+						<li>16</li>
+						<li>17</li>
+						<li>18</li>
+						<li>19</li>
+						<li>20</li>
+						<li><span class="active">21</span></li>
+						<li>22</li>
+						<li>23</li>
+						<li>24</li>
+						<li>25</li>
+						<li>26</li>
+						<li>27</li>
+						<li>28</li>
+						<li>29</li>
+						<li>30</li>
+						<li>31</li>
+					</ul>
+
+
+				</div>
+			</div>
+			<!-- end row  -->
+
+		</div>
+	</div>
+	<!-- toggle menu -->
+	<script type="text/javascript">
+		function toggleMenu() {
+			let toggle = document.querySelector('.toggle');
+			let navigation = document.querySelector('.navigation');
+			let main = document.querySelector('.main');
+			toggle.classList.toggle('active');
+			navigation.classList.toggle('active');
+			main.classList.toggle('active');
+		}
+	</script>
+</body>
+</html>
